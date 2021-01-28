@@ -1,6 +1,5 @@
-interface Renderable {
-    render(): void;
-}
+import Renderable from '../interfaces/Renderable.ts';
+
 export default function Rendered(constr: Renderable, key: string) {    
     Object.defineProperty(constr.constructor.prototype, key, {
         get() {
