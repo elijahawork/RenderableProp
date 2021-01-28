@@ -16,7 +16,7 @@ class Example implements Renderable {
   }
 }
 
-const a = new A('a');
-const b = new A('b');
-a.rd = 5;
-b.rd = 2;
+const a = new Example('a');
+const b = new Example('b');
+a.renderedField = 5;
+b.renderedField = 2;
