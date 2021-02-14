@@ -3,10 +3,10 @@ import Renderable from '../interfaces/Renderable';
 export default function Rendered(constr: Renderable, key: string) {    
     Object.defineProperty(constr.constructor.prototype, key, {
         get() {
-            return this.value;
+            return this[key];
         },
         set(v) {
-            this.value = v;
+            this[key] = v;
             this.render();
         }
     });
